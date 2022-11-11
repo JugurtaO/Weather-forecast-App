@@ -24,47 +24,18 @@ function searchForWeather() {
 function callBackGetSuccess(data) {
   console.log(data);
   let iconClasses = {
-    "humidity":"fa-solid fa-droplet-degree",
-    "pressure":"fa-solid fa-wind-warning",
-    "temp":"fa-solid fa-cloud",
-    "feels_like":"fa-duotone fa-clouds",
-    "temp_max":"fa-solid fa-temperature-sun",
-    "tem_min": "fa-solid fa-temperature-low"
+    humidity: "fa-brands fa-superpowers fa-shake",
+    pressure: "fa-brands fa-soundcloud fa-beat-fade",
+    temp: "fa fa-cloud-sun fa-beat-fade",
+    feels_like: "fa-solid fa-sun fa-beat-fade ",
+    temp_max: "fa-solid fa-temperature-arrow-up fa-beat-fade",
+    tem_min: "fa-solid fa-temperature-low fa-beat-fade",
   };
 
   let cityName = document.querySelector(".text-fill");
   let cityname = cityName.value;
   for (let key in data.main) {
-    if (key === "temp") {
-      let divInfos = document.createElement("div");
-      divInfos.setAttribute("class", "infos");
-
-      let divCity = document.createElement("div");
-      let h3c = document.createElement("h3");
-      divCity.setAttribute("class", "city");
-
-      let divData = document.createElement("div");
-      let h3d = document.createElement("h3");
-      divData.setAttribute("class", "data");
-
-      let divIcon = document.createElement("div");
-      let attribute = document.createElement("i");
-      attribute.setAttribute("class", iconClasses["temp"]+" fa-2xl");
-      divIcon.setAttribute("class", "icon");
-
-      h3c.textContent = cityname;
-      h3d.textContent = (data.main.temp - 273).toFixed(1) + "°C";
-
-      divCity.appendChild(h3c);
-      divData.appendChild(h3d);
-      divIcon.appendChild(attribute);
-      divInfos.appendChild(divCity);
-      divInfos.appendChild(divIcon);
-      divInfos.appendChild(divData);
-     
-
-      container.appendChild(divInfos);
-    } else {
+   
       let divInfos = document.createElement("div");
       divInfos.setAttribute("class", "infos");
 
@@ -79,23 +50,27 @@ function callBackGetSuccess(data) {
       switch (key) {
         case "pressure":
           h3d.textContent = data.main.pressure + " hPa";
-          divIcon.setAttribute("class", iconClasses["pressure"] + " fa-xl");
+          divIcon.setAttribute("class", iconClasses["pressure"] + " fa-2xl");
           break;
         case "humidity":
           h3d.textContent = data.main.humidity + "%";
-          divIcon.setAttribute("class", iconClasses["humidity"] + " fa-xl");
+          divIcon.setAttribute("class", iconClasses["humidity"] + " fa-2xl");
+          break;
+        case "temp":
+          h3d.textContent = (data.main.temp - 273).toFixed(1) + "°C";
+          divIcon.setAttribute("class", iconClasses.temp + " fa-2xl");
           break;
         case "temp_max":
           h3d.textContent = (data.main.temp - 273).toFixed(1) + "°C";
-          divIcon.setAttribute("class", iconClasses.temp_max + " fa-xl");
+          divIcon.setAttribute("class", iconClasses.temp_max + " fa-2xl");
           break;
         case "temp_min":
           h3d.textContent = (data.main.temp - 273).toFixed(1) + "°C";
-          divIcon.setAttribute("class", iconClasses["tem_min"] + " fa-xl");
+          divIcon.setAttribute("class", iconClasses["tem_min"] + " fa-2xl");
           break;
         case "feels_like":
           h3d.textContent = (data.main.temp - 273).toFixed(1) + "°C";
-          divIcon.setAttribute("class", iconClasses["feels_like"] + " fa-xl");
+          divIcon.setAttribute("class", iconClasses["feels_like"] + " fa-2xl");
           break;
         default:
           break;
@@ -119,5 +94,6 @@ function callBackGetSuccess(data) {
 
     cityName.value = "";
     cityName.focus();
+  
   }
-}
+

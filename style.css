@@ -1,16 +1,22 @@
 body{
     background:url(../weatherforecast-site/background.jpg) repeat ;
     background-size:cover;
-    /* background-size:contain; */
+    
 }
-   
-.me{
-    font-size: 3.5rem;
-}
+
 
 .me span{
     margin: 0;
     font-size: 30px;
+    color: white;
+}
+.me a{
+    text-decoration: none;
+    color: white;
+    font-weight: 20px;
+    font-size:medium;
+}
+.me a:hover{
     color: white;
 }
 
@@ -63,10 +69,12 @@ h3{
 }
 
 .data{
+    margin-top: 30px;
     justify-content: center;
 
 }
 .icon{
+    margin-top: 20px;
     justify-content: center;
 }
 
