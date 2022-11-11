@@ -82,7 +82,7 @@ function callBackGetSuccess(data) {
       
       
       container.appendChild(divInfos);
-
+      
       
     }
 
