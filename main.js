@@ -27,7 +27,6 @@ function callBackGetSuccess(data) {
     humidity: "fa-brands fa-superpowers fa-shake",
     pressure: "fa-brands fa-soundcloud fa-beat-fade",
     temp: "fa fa-cloud-sun fa-beat-fade",
-    feels_like: "fa-solid fa-sun fa-beat-fade ",
     temp_max: "fa-solid fa-temperature-arrow-up fa-beat-fade",
     tem_min: "fa-solid fa-temperature-low fa-beat-fade",
   };
@@ -68,10 +67,7 @@ function callBackGetSuccess(data) {
           h3d.textContent = (data.main.temp - 273).toFixed(1) + "°C";
           divIcon.setAttribute("class", iconClasses["tem_min"] + " fa-2xl");
           break;
-        case "feels_like":
-          h3d.textContent = (data.main.temp - 273).toFixed(1) + "°C";
-          divIcon.setAttribute("class", iconClasses["feels_like"] + " fa-2xl");
-          break;
+        
         default:
           break;
       }
