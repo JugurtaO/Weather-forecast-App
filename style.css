@@ -1,17 +1,28 @@
 body{
-    background:url(../weatherforecast-site/background.jpg) no-repeat 50%;
-    background-size: cover;
+    background:url(../weatherforecast-site/background.jpg) repeat ;
+    background-size:cover;
+    /* background-size:contain; */
 }
-/* h4{
+   
+.me{
+    font-size: 3.5rem;
+}
+
+.me span{
+    margin: 0;
+    font-size: 30px;
     color: white;
-} */
+}
+
 #logo{
      text-align: center;
      margin-top: 40px;
      color: white;
-     font-family: 'Josefin Sans', sans-serif;
+     /* font-family: 'Josefin Sans', sans-serif; */
      font-size: 60px;
 }
+
+
 
 .form{
      margin-top: 30px;
@@ -29,14 +40,58 @@ body{
     border-radius: 5px;
     
 }
-.weather-info{
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 100px;
+
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+
+}
+h3{
+    color:white;
+
+}
+
+.data{
+    justify-content: center;
+
+}
+.icon{
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .weather-info{
     margin-left: 500px;
-    margin-top: 20px;
+    
+    
     border-radius: 10px;
     height: 340px;
     width: 300px;
     /* background-color:rgb(2, 19, 19);          
-    opacity: 0.4; */
+    opacity: 0.4; 
 
 } 
 .weather-info h4{
@@ -51,17 +106,8 @@ body{
     color: white;
     margin-left: 10px;
 }
-
+ */
 
 
 /************/
 
-.me{
-    font-size: 3.5rem;
-}
-
-.me span{
-    margin: 0;
-    font-size: 30px;
-    color: white;
-}
