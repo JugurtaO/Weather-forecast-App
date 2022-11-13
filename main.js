@@ -21,6 +21,7 @@ function searchForWeather() {
     });
 }
 
+
 function callBackGetSuccess(data) {
   console.log(data);
   let iconClasses = {
@@ -33,6 +34,9 @@ function callBackGetSuccess(data) {
 
   let cityName = document.querySelector(".text-fill");
   let cityname = cityName.value;
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
   for (let key in data.main) {
    
       let divInfos = document.createElement("div");
@@ -71,25 +75,32 @@ function callBackGetSuccess(data) {
         default:
           break;
       }
+        //before displaying the response ,I'm gonna remove the latest response body from the dom
+     
+      
+    
+
+      //Adding datas to divs
       divData.appendChild(h3d);
       divIcon.appendChild(attribute);
       divInfos.appendChild(divIcon);
       divInfos.appendChild(divData);
-      
-      
       container.appendChild(divInfos);
+      
+      
+
       
       
     }
 
-    // temperature.textContent = "Temperature: " + (data.main.temp - 273).toFixed(1) + "°C"; // expressing temperature with celsius degree
-    // humidity.textContent = "Humidity: " + data.main.humidity + "%";
-    // pressure.textContent = "Pressure: " + data.main.pressure + " hPa";
-    // max_temp.textContent = "Max temp: " + (data.main.temp_max - 273).toFixed(1) + "°C";
-    // min_temp.textContent = "Min temps: " + (data.main.temp_min - 273).toFixed(1) + "°C";
+   
 
     cityName.value = "";
     cityName.focus();
+  
+
+  
+
   
   }
 
