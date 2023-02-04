@@ -1,0 +1,121 @@
+body{
+    background:url(../weatherforecast-site/background.jpg) repeat ;
+    background-size:cover;
+    
+}
+
+
+.me span{
+    margin: 0;
+    font-size: 30px;
+    color: white;
+}
+.me a{
+    text-decoration: none;
+    color: white;
+    font-weight: 20px;
+    font-size:medium;
+}
+.me a:hover{
+    color: white;
+}
+
+#logo{
+     text-align: center;
+     margin-top: 40px;
+     color: white;
+     /* font-family: 'Josefin Sans', sans-serif; */
+     font-size: 60px;
+}
+
+
+
+.form{
+     margin-top: 30px;
+     margin-left: 50px;
+
+    
+}
+.button{
+    margin-left: 30px;
+    border-radius: 5px;
+}
+
+.text-fill{
+    width: 300px;
+    border-radius: 5px;
+    
+}
+
+.container{
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 100px;
+
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+
+}
+h3{
+    color:white;
+
+}
+
+.data{
+    margin-top: 30px;
+    justify-content: center;
+
+}
+.icon{
+    margin-top: 20px;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .weather-info{
+    margin-left: 500px;
+    
+    
+    border-radius: 10px;
+    height: 340px;
+    width: 300px;
+    /* background-color:rgb(2, 19, 19);          
+    opacity: 0.4; 
+
+} 
+.weather-info h4{
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+
+}
+
+.weather-info h5{
+    margin-top: 30px;
+    color: white;
+    margin-left: 10px;
+}
+ */
+
+
+/************/
+
